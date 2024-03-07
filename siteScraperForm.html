@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--	Author:   Nathan Mckee
+		Date:     2/20/24
+		File:	  siteScraperForm.html
+		Purpose:  Send Form Data (URL) to siteScraperGetData.php
+        Purpose:  Should return scraped data from $myURL
+
+-->
+
+<html>
+<head>
+	<title>Nathan's Site Scraper</title>
+	<link rel ="stylesheet" type="text/css" href="mystyles.css">
+</head>
+
+<body>
+	<h1>Please Enter Your User Information</h1>
+	
+	<form action = "siteScraperGetData.php" method = "post" >
+		<label>Enter your Username<input type = "text" size = "20" name = "myUsername"></label>
+		<label>Enter Your Password:<input type = "password" size = "20" name = "myPassword"></label><br>
+        <label>Enter Your URL to Scrape (use this format: www.website.com) <input type = "text" size = "40" name = "myUrl"></label><br><br>
+		<input class="submit" type = "submit" value = "SUBMIT">
+</form>
+</body>
+</html>
