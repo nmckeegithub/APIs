@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--	Author:   Nathan Mckee
+		Date:     2/21/24
+		File:	  cveSearchForm.html
+		Purpose:  Send Form Data (CVE Search Criteria) to cveGetData.php
+        Purpose:  Should return CVE data based on seach criteria
+
+-->
+
+<html>
+<head>
+	<title>Nathan's CVE Search App</title>
+	<link rel ="stylesheet" type="text/css" href="mystyles.css">
+</head>
+
+<body>
+	<h2>CVE Data Search App. </h2>
+	<b>Page being searched:</b> <a href="https://services.nvd.nist.gov/rest/json/cves/2.0/?pubStartDate=2021-08-04T00:00:00.000&pubEndDate=2021-08-04T12:00:00.000" target="_blank">Visit Search Page</a> (New window will open) </label><br><br>
+	<b>Beautified Search Page:</b> <a href="https://codebeautify.org/jsonviewer?url=https://services.nvd.nist.gov/rest/json/cves/2.0/?pubStartDate=2021-08-04T00:00:00.000&pubEndDate=2021-08-04T12:00:00.000" target="_blank">Visit Search Page (Beautified)</a><br><br>
+		<label><b>CVE Test Data Date Range:</b> (4/8/2021 UTC 00:00:00.000 to 4/8/2021 UTC 12:00:00.000)</label><br><br>
+        <label><b>Date/Time Format:</b> 2021-08-04T00:00:00.000 - 2021-08-04T12:00:00:00.000</label><br><br>
+	
+	<form action = "cveSearchGetData.php" method = "post" >
+		<label>Enter your Username<input type = "text" size = "20" name = "myUsername"> Use "<b>cveuser</b>"</label><br><br>
+		<label>Enter Your Password:<input type = "password" size = "20" name = "myPassword"> Use "<b>password</b>"</label><br><br>
+        <label for="searchParameter">Select Your Search Parameters</label>
+        <select id="searchParameter" name="searchParameter">
+        <option value="id">Vulnerability ID</option>
+        <option value="attackVector">Attack Vector</option>
+        <option value="confidentialityImpact">CIA Triad confidentiality Impact</option>
+        <option value="attackComplexity">Attack Complexity</option>
+        </select><br><br>
+		<input class="submit" type = "submit" value = "SUBMIT">
+</form>
+</body>
+</html>
