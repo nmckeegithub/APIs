@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--	Author:   Nathan Mckee
+		Date:     2/23/24
+		File:	  sqorzSearchForm.html
+		Purpose:  Send Form Data (Sqorz Sensor Data) to sqorzSearchGetData.php
+        Purpose:  Should return Sqorz Sensor data based on seach criteria
+
+-->
+
+<html>
+<head>
+	<title>Nathan's Sqorz Search App</title>
+	<link rel ="stylesheet" type="text/css" href="mystyles.css">
+</head>
+
+<body>
+	<h2>Sqorz Data Search App. </h2>
+	<b>Page being searched:</b> <a href="https://our.sqorz.com/json/leaderboard/65bafa1317bdc8e05c381083" target="_blank">Visit Search Page</a> (New window will open) </label><br><br>
+	<b>Beautified Search Page:</b> <a href="https://codebeautify.org/jsonviewer?url=https://our.sqorz.com/json/leaderboard/65bafa1317bdc8e05c381083" target="_blank">Visit Search Page (Beautified)</a><br><br>
+	
+	
+	<form action = "sqorzSearchGetData.php" method = "post" >
+		
+		<label>Enter your Username: <input type = "text" size = "20" name = "myUsername"> Use "<b>sqorzuser</b>"</label><br><br>
+		<label>Enter Your Password: <input type = "password" size = "20" name = "myPassword"> Use "<b>password</b>"</label><br><br>
+		<label for="searchParameter">Select Your Search Parameters: </label>
+        <select id="searchParameter" name="searchParameter">
+        <option value="memberID">Member ID</option>
+        <option value="lastName">Last Name</option>
+        <option value="Age">Age</option>
+        <option value="groupName">Home Track</option>
+        </select>
+        <br><br>
+		<input class="submit" type = "submit" value = "SUBMIT">
+</form>
+	<br>
+	<img src="images/fork_transponder.jfif" alt="bmx fork" width="120" height="120">
+	<img src="images/bmx_image.jfif" alt="bmx racer" width="120" height="120">
+	<img src="images/mylaps-chipx.png" alt="bmx fork" width="120" height="120">
+    <h2>Other Useful Info:</h2>
+	<b>Get Transponder Data:</b> https://my.sqorz.com/training/transponder/KL-07919<br><br>
+	<b>Sample Test Data (Practice):</b> https://our.sqorz.com/org/rhbmx/leaderboard/65bafa1317bdc8e05c381083<br><br>
+    <b>Golden State Nationals (USABMX National):</b> https://our.sqorz.com/json/leaderboard/65ccf0c9a0b7ea511c1d01eb<br><br>
+	<b>Rockhill SX Leaderboard February 2024:</b> https://our.sqorz.com/json/leaderboard/65bafa1317bdc8e05c381083<br><br>
+	<b>API Docs:</b> https://eventsoftltd.atlassian.net/wiki/spaces/SI/pages/2780561409/APIs+for+information+and+results<br><br>
+    <b>Sample JSON (International):</b> https://our.sqorz.com/json/event/6453634f979fbdc2a0a63db8</label><br><br>
+</body>
+</html>
