@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--	Author:   Nathan Mckee
+		Date:     2/20/24
+		File:	  twilioForm.html
+		Purpose:  Send Form Data to twilioSendMessage.php
+
+-->
+
+<html>
+<head>
+	<title>Nathan's Messenger App</title>
+	<link rel ="stylesheet" type="text/css" href="mystyles.css">
+</head>
+
+<body>
+	<h1>Please Enter Your User Information</h1>
+	
+	<form action = "twilioSendMessage.php" method = "post" >
+		<label>Enter your Username<input type = "text" size = "20" name = "myUsername"></label>
+		<label>Enter Your Password:<input type = "password" size = "20" name = "myPassword"></label><br>
+        <textarea id="myMessage" name="myMessage" rows="5" cols="33">    
+        </textarea><br>
+		<input class="submit" type = "submit" value = "SUBMIT">
+</form>
+</body>
+</html>
